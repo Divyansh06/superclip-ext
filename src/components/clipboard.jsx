@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
-import "./clipboard.css";
 import { clearClips, deleteClip, getClips, postClip } from "../actions/clips";
+import { clearToken } from "../actions/login";
+import "./clipboard.css";
 
 const Clipboard = () => {
   const [clips, setClips] = useState([]);
@@ -60,6 +61,11 @@ const Clipboard = () => {
     }
   };
 
+  const handleLogout = async () => {
+    await clearToken();
+    window.location.reload();
+  };
+
   return (
     <div>
       <div className="clipboard-input">
@@ -80,6 +86,9 @@ const Clipboard = () => {
         </button>
         <button className="extra-actions" onClick={handleClearClips}>
           Clear Clips
+        </button>
+        <button className="extra-actions" onClick={handleLogout}>
+          Logout
         </button>
       </div>
 
