@@ -1,10 +1,15 @@
 {
-    "manifest_version": 3,
-    "name": "superclip",
-    "version": "1.0.0",
-    "description": "A simple React app as a Chrome extension",
-    "action": {
-      "default_popup": "index.html"
-    },
-    "permissions": []
-  }
+  "manifest_version": 3,
+  "name": "superclip",
+  "version": "1.0.0",
+  "description": "A simple React app as a Chrome extension",
+  "action": {
+    "default_popup": "index.html"
+  },
+  "icons": {
+    "16": "16.png",
+    "48": "32.png",
+    "64": "64.png"
+  },
+  "permissions": []
+}
